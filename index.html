@@ -1,0 +1,678 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VINSORA — Software Development Studio, Coimbatore</title>
+  <meta name="description"
+    content="VINSORA builds websites, custom software, business automation, desktop and web applications that simplify workflows and help businesses grow. A venture under Bilet Kollywood Games, managed by Vigneshwaran G K.">
+  <meta name="author" content="Vigneshwaran G K">
+  <meta name="theme-color" content="#FAFAF9">
+  <link rel="canonical" href="https://vinsora.com">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2309090B' rx='6'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23FAFAF9' font-family='system-ui,sans-serif' font-weight='700' font-size='16'%3EV%3C/text%3E%3C/svg%3E">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vinsora.com">
+  <meta property="og:title" content="VINSORA — Software Development Studio, Coimbatore">
+  <meta property="og:description"
+    content="Websites, custom applications, and automation for businesses that have outgrown spreadsheets, paperwork, and workarounds.">
+  <meta property="og:site_name" content="VINSORA">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VINSORA — Software Development Studio, Coimbatore">
+  <meta name="twitter:description"
+    content="Websites, custom applications, and automation for businesses that have outgrown spreadsheets, paperwork, and workarounds.">
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "VINSORA",
+    "description": "Software Development Studio in Coimbatore building websites, custom software, business automation, and desktop/web applications. A venture under Bilet Kollywood Games, managed by Vigneshwaran G K.",
+    "url": "https://vinsora.com",
+    "telephone": "+917339663729",
+    "email": "hello@vinsora.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Vigneshwaran G K"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Bilet Kollywood Games"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "SF No 164/4A, Site No 4, West, Vinayaga Gardens, Malumichampatti",
+      "addressLocality": "Coimbatore",
+      "postalCode": "641050",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ============ MENU OVERLAY (MOBILE) ============ -->
+  <div class="menu" id="menuOverlay" hidden>
+    <nav class="menu__nav" aria-label="Menu">
+      <a href="#about"><span class="idx">01</span>About</a>
+      <a href="#services"><span class="idx">02</span>Services</a>
+      <a href="#work"><span class="idx">03</span>Work</a>
+      <a href="#process"><span class="idx">04</span>Process</a>
+      <a href="#values"><span class="idx">05</span>Values</a>
+      <a href="#contact"><span class="idx">06</span>Contact</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="https://github.com/Vigneshwaran-tech" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="mailto:hello@vinsora.com">hello@vinsora.com</a>
+      <a href="tel:+917339663729">+91 73396 63729</a>
+      <span class="menu__location">Coimbatore, India</span>
+    </div>
+  </div>
+
+  <div class="canvas">
+
+    <!-- ============ HEADER ============ -->
+    <header class="header">
+      <a href="#top" class="wordmark" aria-label="VINSORA home">VINSORA<span>.</span></a>
+      <nav class="header__nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#values">Values</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header__actions">
+        <a href="#contact" class="btn btn--solid header__cta">Start a Project</a>
+      </div>
+      <button class="header__menu" id="menuToggleMobile" aria-expanded="false" aria-controls="menuOverlay"
+        aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+      <div class="header__progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+    </header>
+
+    <main id="top">
+
+      <!-- ============ HERO ============ -->
+      <section class="hero" aria-label="Introduction">
+        <div class="hero__upper">
+          <div class="hero__copy">
+            <div class="hero__badge">
+              <span class="badge__dot" aria-hidden="true"></span>
+              <span>Software Development Studio · Coimbatore</span>
+            </div>
+            <h1>Software built for the way your business actually works.</h1>
+            <p class="lede">Websites, custom web platforms and automation for businesses that have outgrown
+              spreadsheets, paperwork and manual workarounds.</p>
+            <div class="hero__actions">
+              <a href="#contact" class="btn btn--solid">Start a Project <span aria-hidden="true">→</span></a>
+              <a href="#work" class="btn btn--ghost">Explore Work <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+
+          <div class="hero__object" aria-hidden="true">
+            <svg id="monolith" role="presentation"></svg>
+          </div>
+        </div>
+
+        <div class="hero__strip">
+          <div class="strip-item">
+            <span class="idx">Location</span>
+            <strong>Coimbatore, India</strong>
+            <em>Tamil Nadu Headquarters</em>
+          </div>
+          <div class="strip-item">
+            <span class="idx">Platforms</span>
+            <strong>Web &amp; Desktop</strong>
+            <em>Custom business software</em>
+          </div>
+          <div class="strip-item">
+            <span class="idx">Delivery</span>
+            <strong>End-to-End</strong>
+            <em>Architecture to post-launch</em>
+          </div>
+          <a href="#work" class="strip-item strip-item--action">
+            <span class="idx">Portfolio</span>
+            <strong>Selected Works <span class="arrow" aria-hidden="true">↓</span></strong>
+            <em>05 featured projects</em>
+          </a>
+        </div>
+      </section>
+
+                  <!-- ============ ABOUT ============ -->
+      <section class="section" id="about" data-section="1">
+        <div class="section__head">
+          <div class="about__tags">
+            <span class="idx">01 — About Studio</span>
+            <span class="venture-badge">
+              <span class="venture-dot" aria-hidden="true"></span>
+              A Venture under Kollywood Games
+            </span>
+          </div>
+          <h2>We start with how your business actually works, not the technology.</h2>
+          <p class="section__desc">VINSORA is a software development venture under <strong>Kollywood Games</strong>, based in Coimbatore, Tamil Nadu. We build custom web platforms, automated workflows, and internal applications that eliminate manual paperwork and replace messy spreadsheets.</p>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__card">
+            <div class="about__card-top">
+              <span class="about__num">01</span>
+              <div class="about__card-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+            </div>
+            <h3>100% Handcrafted Code</h3>
+            <p>Zero bloated themes or fragile site builders. Clean, production-ready code built for speed, durability, and long-term maintainability.</p>
+          </div>
+
+          <div class="about__card">
+            <div class="about__card-top">
+              <span class="about__num">02</span>
+              <div class="about__card-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+            </div>
+            <h3>Direct Technical Leadership</h3>
+            <p>Architecture and milestones are managed directly by senior engineering. Zero junior handoffs, zero communication layers.</p>
+          </div>
+
+          <div class="about__card">
+            <div class="about__card-top">
+              <span class="about__num">03</span>
+              <div class="about__card-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3>Total Client Ownership</h3>
+            <p>You hold 100% intellectual property, full repository access, and database schemas from day one with zero vendor lock-in.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SERVICES ============ -->
+      <section class="section" id="services" data-section="2">
+        <div class="section__head">
+          <span class="idx">02 — Core Services</span>
+          <h2>Custom software engineering and digital capabilities.</h2>
+          <p class="section__desc">From high-performance web platforms to custom internal applications and intelligent
+            workflow automation.</p>
+        </div>
+        <div class="grid grid--services">
+          <article class="cell">
+            <div class="cell__top">
+              <div class="cell__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <span class="idx">01</span>
+            </div>
+            <h3>Website Design &amp; Development</h3>
+            <p>A fast, credible website that turns visitors into enquiries.</p>
+          </article>
+          <article class="cell">
+            <div class="cell__top">
+              <div class="cell__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="idx">02</span>
+            </div>
+            <h3>Custom Software Development</h3>
+            <p>Software shaped around your process, not the other way round.</p>
+          </article>
+          <article class="cell">
+            <div class="cell__top">
+              <div class="cell__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <span class="idx">03</span>
+            </div>
+            <h3>Business Automation</h3>
+            <p>Repetitive tasks handled automatically, so your team can focus.</p>
+          </article>
+          <article class="cell">
+            <div class="cell__top">
+              <div class="cell__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <span class="idx">04</span>
+            </div>
+            <h3>Desktop Applications</h3>
+            <p>Reliable tools for billing, inventory and operations — online or offline.</p>
+          </article>
+          <article class="cell">
+            <div class="cell__top">
+              <div class="cell__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+              </div>
+              <span class="idx">05</span>
+            </div>
+            <h3>Web Applications &amp; Dashboards</h3>
+            <p>Live numbers in one place, so decisions don't wait for reports.</p>
+          </article>
+          <article class="cell">
+            <div class="cell__top">
+              <div class="cell__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <span class="idx">06</span>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>Interfaces your staff and customers understand without training.</p>
+          </article>
+          <article class="cell">
+            <div class="cell__top">
+              <div class="cell__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <span class="idx">07</span>
+            </div>
+            <h3>Maintenance &amp; Support</h3>
+            <p>Updates, fixes and monitoring that keep systems running smoothly.</p>
+          </article>
+          <a href="#contact" class="cell cell--cta">
+            <div class="cell__top">
+              <span class="idx">Not sure where to start?</span>
+            </div>
+            <h3>Tell us the problem. We'll suggest the right build.</h3>
+            <span class="cell__link">Talk to us <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </section>
+
+                  <!-- ============ WORK ============ -->
+      <section class="section" id="work" data-section="3">
+        <div class="section__head">
+          <span class="idx">03 — Selected Work</span>
+          <h2>From client software to business websites.</h2>
+          <p class="section__desc">Desktop applications, web platforms and websites built by Vinsora. Live demos and source code are linked where available.</p>
+        </div>
+
+        <div class="work__grid">
+          <!-- 01: Kari Motors -->
+          <article class="work-card" id="work-kari">
+            <div class="work-card__top">
+              <div class="work-card__meta">
+                <span class="work-card__num">01</span>
+                <span class="work-card__cat">Website Redesign</span>
+              </div>
+              <div class="work-card__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v2M4.93 4.93l1.41 1.41M2 12h2M20 12h2M17.66 6.34l1.41-1.41M12 12l3.5-3.5"/>
+                  <path d="M4 18a8 8 0 1 1 16 0"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="work-card__title">Kari Motors Redesign</h3>
+            <p class="work-card__desc">A redesigned website for Kari Motor Speedway, Coimbatore's race circuit, with a circuit map, track experiences, events and a photo gallery.</p>
+            <div class="work-card__tech">
+              <span class="tech-chip">React</span>
+              <span class="tech-chip">Vite</span>
+              <span class="tech-chip">Tailwind</span>
+            </div>
+            <div class="work-card__foot">
+              <a href="https://kari-motors-redesign.vercel.app" target="_blank" rel="noopener noreferrer" class="work-card__link">
+                Live site <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/Vigneshwaran-tech/Kari-Motors-redesign" target="_blank" rel="noopener noreferrer" class="work-card__link work-card__link--secondary">
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 02: Invoice System -->
+          <article class="work-card" id="work-invoice">
+            <div class="work-card__top">
+              <div class="work-card__meta">
+                <span class="work-card__num">02</span>
+                <span class="work-card__cat">Desktop Application</span>
+              </div>
+              <div class="work-card__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1-2 1z"/>
+                  <path d="M8 8h8M8 12h8M8 16h4"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="work-card__title">Smart Invoicing System</h3>
+            <p class="work-card__desc">Offline desktop billing app for DC MOTO, a motorcycle spares and service business: itemised invoices with print and PDF, a labour-service catalogue, stock tracking and a sales dashboard.</p>
+            <div class="work-card__tech">
+              <span class="tech-chip">Electron</span>
+              <span class="tech-chip">React</span>
+              <span class="tech-chip">Vite</span>
+            </div>
+            <div class="work-card__foot">
+              <a href="https://invoice-system-swart.vercel.app" target="_blank" rel="noopener noreferrer" class="work-card__link">
+                Web demo <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/Vigneshwaran-tech/Invoice-System" target="_blank" rel="noopener noreferrer" class="work-card__link work-card__link--secondary">
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 03: VOC Service Software -->
+          <article class="work-card" id="work-voc">
+            <div class="work-card__top">
+              <div class="work-card__meta">
+                <span class="work-card__num">03</span>
+                <span class="work-card__cat">Operations &amp; Dispatch</span>
+              </div>
+              <div class="work-card__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M9 3v18M15 3v18M3 9h18M3 15h18"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="work-card__title">VOC Service Management</h3>
+            <p class="work-card__desc">Workshop operations platform managing vehicle bay queues, work orders, and inventory sync.</p>
+            <div class="work-card__tech">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Qt</span>
+              <span class="tech-chip">PostgreSQL</span>
+            </div>
+            <div class="work-card__foot">
+              <span class="work-card__private">Private repository · available on request</span>
+            </div>
+          </article>
+
+          <!-- 04: IronForge Fitness -->
+          <article class="work-card" id="work-ironforge">
+            <div class="work-card__top">
+              <div class="work-card__meta">
+                <span class="work-card__num">04</span>
+                <span class="work-card__cat">Business Website</span>
+              </div>
+              <div class="work-card__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="work-card__title">IronForge Fitness Website</h3>
+            <p class="work-card__desc">Responsive multi-page gym website with training programs, trainer profiles, membership plans and a contact page.</p>
+            <div class="work-card__tech">
+              <span class="tech-chip">HTML</span>
+              <span class="tech-chip">CSS</span>
+              <span class="tech-chip">JavaScript</span>
+            </div>
+            <div class="work-card__foot">
+              <a href="https://github.com/Vigneshwaran-tech/-IronForge-Fitness" target="_blank" rel="noopener noreferrer" class="work-card__link">
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 05: UrbanBites Cafe -->
+          <article class="work-card" id="work-urbanbites">
+            <div class="work-card__top">
+              <div class="work-card__meta">
+                <span class="work-card__num">05</span>
+                <span class="work-card__cat">Business Website</span>
+              </div>
+              <div class="work-card__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                  <line x1="6" y1="1" x2="6" y2="4"/>
+                  <line x1="10" y1="1" x2="10" y2="4"/>
+                  <line x1="14" y1="1" x2="14" y2="4"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="work-card__title">UrbanBites Cafe Website</h3>
+            <p class="work-card__desc">Responsive multi-page cafe website with menu, gallery, about and contact pages, set up for search engines with a sitemap.</p>
+            <div class="work-card__tech">
+              <span class="tech-chip">HTML</span>
+              <span class="tech-chip">CSS</span>
+              <span class="tech-chip">JavaScript</span>
+            </div>
+            <div class="work-card__foot">
+              <a href="https://github.com/Vigneshwaran-tech/UrbanBites-Cafe" target="_blank" rel="noopener noreferrer" class="work-card__link">
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ PROCESS ============ -->
+      <section class="section" id="process" data-section="4">
+        <div class="section__head">
+          <span class="idx">04 — Engineering Process</span>
+          <h2>A calm, milestone-driven path from concept to launch.</h2>
+          <p class="section__desc">Screens and flows are designed and reviewed with you before a line of production code
+            is written, with weekly demos throughout.</p>
+        </div>
+        <ol class="strip strip--4">
+          <li class="strip__col">
+            <span class="strip__num">01</span>
+            <h3>Discovery</h3>
+            <p>We map your current workflow, find where time and money are lost, and agree on what success looks like.
+            </p>
+            <span class="idx">Week 1</span>
+          </li>
+          <li class="strip__col">
+            <span class="strip__num">02</span>
+            <h3>Design</h3>
+            <p>Screens and flows are designed and reviewed with you before a line of production code is written.</p>
+            <span class="idx">Week 1–3</span>
+          </li>
+          <li class="strip__col">
+            <span class="strip__num">03</span>
+            <h3>Development</h3>
+            <p>We build in short cycles with regular demos, so you see progress and steer it as we go.</p>
+            <span class="idx">Agreed milestones</span>
+          </li>
+          <li class="strip__col">
+            <span class="strip__num">04</span>
+            <h3>Support</h3>
+            <p>After launch we train your team, fix issues quickly and keep the system updated as you grow.</p>
+            <span class="idx">Ongoing</span>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ VISION / MISSION / VALUES ============ -->
+      <section class="section" id="values" data-section="5">
+        <div class="section__head">
+          <span class="idx">05 — Principles &amp; Culture</span>
+          <h2>The engineering standards behind every line of code.</h2>
+          <p class="section__desc">What guides our technical architecture, code quality, and long-term client
+            relationships.</p>
+        </div>
+        <div class="panel-split">
+          <div class="panel-split__side">
+            <span class="idx">Vision</span>
+            <p class="panel-split__text">To become a trusted technology partner for businesses by creating innovative,
+              accessible, and impactful digital solutions that shape a smarter and more connected future.</p>
+          </div>
+          <div class="panel-split__side">
+            <span class="idx">Mission</span>
+            <div class="panel-split__body">
+              <p class="panel-split__text">To empower businesses through technology by developing reliable software,
+                modern digital experiences, and practical automation solutions.</p>
+              <p class="panel-split__note">We aim to understand real-world challenges, build meaningful solutions, and
+                create long-term relationships with our clients.</p>
+            </div>
+          </div>
+        </div>
+
+        <ol class="strip strip--5">
+          <li class="strip__col">
+            <span class="strip__num">01</span>
+            <h3>Innovation</h3>
+            <p>Continuously exploring better ways to solve problems.</p>
+          </li>
+          <li class="strip__col">
+            <span class="strip__num">02</span>
+            <h3>Integrity</h3>
+            <p>Building trust through transparency and responsibility.</p>
+          </li>
+          <li class="strip__col">
+            <span class="strip__num">03</span>
+            <h3>Quality</h3>
+            <p>Delivering reliable and user-friendly solutions.</p>
+          </li>
+          <li class="strip__col">
+            <span class="strip__num">04</span>
+            <h3>Collaboration</h3>
+            <p>Growing together with our clients and team.</p>
+          </li>
+          <li class="strip__col">
+            <span class="strip__num">05</span>
+            <h3>Continuous Learning</h3>
+            <p>Adapting to emerging technologies.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="section" id="contact" data-section="6">
+        <div class="section__head">
+          <span class="idx">06 — Start a Project</span>
+          <h2>Let's discuss what you need built.</h2>
+          <p class="section__desc">Tell us about the process you want to automate, the software you need developed, or
+            the website you want to launch. We reply within one business day.</p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info">
+            <div class="contact__card">
+              <span class="idx">Email</span>
+              <a href="mailto:hello@vinsora.com" class="contact__link">hello@vinsora.com</a>
+              <span class="contact__hint">Direct inbox · Vigneshwaran G K</span>
+            </div>
+            <div class="contact__card">
+              <span class="idx">Phone</span>
+              <a href="tel:+917339663729" class="contact__link">+91 73396 63729</a>
+              <span class="contact__hint">Monday – Saturday, 9am – 7pm IST</span>
+            </div>
+            <div class="contact__card">
+              <span class="idx">Office Location</span>
+              <address class="contact__address">
+                Survey No. 164/4A, Site No. 4, West,<br>
+                Vinayaga Gardens, Malumichampatti,<br>
+                Coimbatore – 641050, Tamil Nadu
+              </address>
+              <a class="contact__map"
+                href="https://www.google.com/maps/search/?api=1&amp;query=Vinayaga+Gardens+Malumichampatti+Coimbatore+641050"
+                target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
+            </div>
+          </div>
+
+          <form class="form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="f-name" class="idx">Your Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-required="true"
+                placeholder="Your name">
+            </div>
+            <div class="field">
+              <label for="f-email" class="idx">Email Address</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required aria-required="true"
+                placeholder="name@company.com">
+            </div>
+            <div class="field">
+              <label for="f-service" class="idx">Service Needed</label>
+              <select id="f-service" name="service" required aria-required="true">
+                <option value="" selected disabled>Select a service</option>
+                <option>Website Design &amp; Development</option>
+                <option>Custom Software Development</option>
+                <option>Business Automation</option>
+                <option>Desktop Applications</option>
+                <option>Web Applications &amp; Dashboards</option>
+                <option>UI/UX Design</option>
+                <option>Software Maintenance &amp; Support</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-msg" class="idx">Project Summary</label>
+              <textarea id="f-msg" name="message" rows="4" required aria-required="true"
+                placeholder="Tell us briefly what you want to build or improve..."></textarea>
+            </div>
+            <div class="form__foot">
+              <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+              <button type="submit" class="btn btn--solid form__btn">Send Inquiry <span
+                  aria-hidden="true">→</span></button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer__left">
+        <div class="footer__brand">
+          <span class="footer__copy">© <span id="year">2026</span> VINSORA. All rights reserved.</span>
+          <span class="footer__sub">A venture under <strong>Bilet Kollywood Games</strong> · Managed by <strong>Vigneshwaran&nbsp;G&nbsp;K</strong></span>
+        </div>
+        <div class="footer__contact" aria-label="Direct contact">
+          <a href="https://github.com/Vigneshwaran-tech" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span class="footer__sep" aria-hidden="true">·</span>
+          <a href="mailto:hello@vinsora.com">hello@vinsora.com</a>
+          <span class="footer__sep" aria-hidden="true">·</span>
+          <a href="tel:+917339663729">+91 73396 63729</a>
+        </div>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#values">Values</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
