@@ -1,4 +1,4 @@
-(() => {
+﻿(() => {
   "use strict";
 
   /* ---------------------------------------------------------
@@ -179,15 +179,94 @@
   onScroll();
 
   /* ---------------------------------------------------------
-     Contact form — validates, updates ARIA states, then 
-     pre-fills email inquiry with fallback notice.
+     Universal Email Handler (Copy-to-Clipboard + Webmail Fallback)
+     Handles cases where no desktop mail client is configured.
      --------------------------------------------------------- */
   const CONTACT_EMAIL = "hello@vinsora.com";
+
+  const showToast = (message, actionText, actionUrl) => {
+    let toast = document.getElementById("emailToast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "emailToast";
+      toast.className = "toast";
+      toast.setAttribute("role", "status");
+      toast.setAttribute("aria-live", "polite");
+      document.body.appendChild(toast);
+    }
+
+    toast.innerHTML = `
+      <span class="toast__msg">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        ${message}
+      </span>
+      ${actionUrl ? `<a href="${actionUrl}" target="_blank" rel="noopener noreferrer" class="toast__action">${actionText} ↗</a>` : ""}
+    `;
+
+    toast.classList.add("is-visible");
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(() => {
+      toast.classList.remove("is-visible");
+    }, 4500);
+  };
+
+  const copyToClipboard = async (text) => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    } catch (_) {}
+
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    } catch (_) {
+      return false;
+    }
+  };
+
+  // Attach click-to-copy and webmail launcher to all mailto links and copy buttons
+  document.addEventListener("click", e => {
+    const copyBtn = e.target.closest(".copy-email-btn");
+    const mailLink = e.target.closest('a[href^="mailto:"]');
+
+    if (copyBtn || mailLink) {
+      const email = copyBtn ? (copyBtn.getAttribute("data-email") || CONTACT_EMAIL) : CONTACT_EMAIL;
+      copyToClipboard(email);
+
+      const gmailCompose = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent("Project Inquiry — Vinsora")}`;
+      showToast(`Copied <strong>${email}</strong> to clipboard!`, "Open in Gmail", gmailCompose);
+
+      if (copyBtn) {
+        e.preventDefault();
+        const originalText = copyBtn.querySelector("span")?.textContent || "Copy";
+        const span = copyBtn.querySelector("span");
+        if (span) span.textContent = "Copied!";
+        setTimeout(() => { if (span) span.textContent = originalText; }, 2000);
+      }
+    }
+  });
+
+  /* ---------------------------------------------------------
+     Contact form — validates, copies inquiry, launches mailto,
+     and provides direct Gmail Web fallback.
+     --------------------------------------------------------- */
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");
 
   if (form) {
-    form.addEventListener("submit", e => {
+    form.addEventListener("submit", async e => {
       e.preventDefault();
       let ok = true;
       form.querySelectorAll("[required]").forEach(el => {
@@ -204,8 +283,21 @@
       const d = Object.fromEntries(new FormData(form));
       const subject = `Project inquiry — ${d.service || "General"}`;
       const body = `Name: ${d.name}\nEmail: ${d.email}\nService: ${d.service}\n\n${d.message}`;
-      location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      if (status) status.textContent = "Opening your email app… You can also reach us directly at +91 73396 63729.";
+      const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_EMAIL)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Copy entire inquiry text to clipboard
+      await copyToClipboard(`To: ${CONTACT_EMAIL}\nSubject: ${subject}\n\n${body}`);
+
+      // Attempt mailto
+      window.location.href = mailtoUrl;
+
+      // Update status message with direct Gmail web alternative
+      if (status) {
+        status.innerHTML = `Email client opening. <a href="${gmailUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration:underline; font-weight:600; color:var(--text); margin-left:6px;">Or open in Gmail ↗</a>`;
+      }
+
+      showToast(`Inquiry copied to clipboard!`, "Open in Gmail", gmailUrl);
     });
 
     form.addEventListener("input", e => {

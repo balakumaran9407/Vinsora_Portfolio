@@ -1425,6 +1425,105 @@ h3 {
 }
 
 /* =========================================================
+   EMAIL TOAST & COPY NOTIFICATION
+   ========================================================= */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px;
+  background: var(--text);
+  color: #FFFFFF;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-size: 13px;
+  font-weight: 450;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px) scale(0.96);
+  transition: opacity 220ms var(--ease), transform 220ms var(--ease);
+}
+
+.toast.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.toast__msg {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toast__msg svg {
+  color: var(--accent-emerald);
+  flex-shrink: 0;
+}
+
+.toast__msg strong {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.toast__action {
+  font-size: 12px;
+  font-weight: 600;
+  color: #F59E0B;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: background 160ms var(--ease), color 160ms var(--ease);
+  white-space: nowrap;
+}
+
+.toast__action:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: #FBBF24;
+}
+
+.contact__card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copy-email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--dim);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--t) var(--ease);
+}
+
+.copy-email-btn:hover {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--line-strong);
+}
+
+@media (max-width: 600px) {
+  .toast {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    justify-content: space-between;
+    border-radius: var(--radius-md);
+  }
+}
+/* =========================================================
    RESPONSIVE
    ========================================================= */
 /* Short laptop screens: keep the hero (incl. the info cards) within the first screen */
